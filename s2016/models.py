@@ -8,5 +8,6 @@ STYLE_CHOICES = sorted((item, item) for item in get_all_styles())
 
 class Doctor(models.Model):
   name = models.CharField(max_length=100)
+  education = models.CharField(max_length=100)
   specialty = models.CharField(max_length=100)
-  
+  is_active = models.BooleanField(default=True) 
